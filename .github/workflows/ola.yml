@@ -1,0 +1,15 @@
+name: Eae
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Host
+        run: |
+          echo "eaee $GITHUB_ACTOR"
+          echo "disparo por $GITHUB_EVENT_NAME"
+          uname -a
+          python3 --version
