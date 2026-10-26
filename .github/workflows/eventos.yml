@@ -1,0 +1,21 @@
+name: Eventos
+
+on:
+  push:
+    paths:
+      - 'src/**'
+  workflow_dispatch:
+    inputs:
+      nome:
+        description: "Olá! Quem é você?"
+        default: 'Turma'
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+          - name: Print the input name to STDOUT
+            run: Olá, ${{ inputs.username }}!
